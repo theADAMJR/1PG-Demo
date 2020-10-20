@@ -13,9 +13,9 @@ for (const file of files) {
   commands.set(command.name, command);
 }
 
-async function handle(msg) {
+async function handle(msg, savedGuild) {
   try {
-    const prefix = '.';
+    const prefix = savedGuild.general.prefix;
     const commandName = msg.content.slice(prefix.length);
   
     const command = commands.get(commandName);
