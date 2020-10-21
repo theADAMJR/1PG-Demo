@@ -16,10 +16,16 @@ for (const file of files) {
 async function handle(msg, savedGuild) {
   try {
     const prefix = savedGuild.general.prefix;
-    const commandName = msg.content.slice(prefix.length);
+    const args = msg.content
+      .split(' ')
+      .slice(1);
+
+    const commandName = msg.content
+      .split(' ')[0]
+      .slice(prefix.length);
   
     const command = commands.get(commandName);
-    await command?.execute(msg);
+    await command?.execute(msg, ...args);
   } catch (err) {
     msg.channel.send(`⚠ ${err?.message}`);
   }
