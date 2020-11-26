@@ -25,10 +25,11 @@ async function handle(msg, savedGuild) {
       .slice(prefix.length);
   
     const command = commands.get(commandName);
-    await command?.execute(msg, ...args);
+    await command.execute(msg, ...args);
   } catch (err) {
-    msg.channel.send(`⚠ ${err?.message}`);
+    msg.channel.send(`⚠ ${err.message}`);
   }
 }
 
 module.exports.handle = handle;
+module.exports.commands = commands;

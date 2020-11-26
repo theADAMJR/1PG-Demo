@@ -13,3 +13,4 @@ const bot = new Client();
 bot.login(config.bot.token);
 
 require('./handlers/event-handler')(bot);
+require('./dashboard/server')
