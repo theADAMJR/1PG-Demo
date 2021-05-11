@@ -1,3 +1,5 @@
+> Please see https://github.com/theADAMJR/1PG for a more comprehensive, and more updated repo.
+
 # 1PG Demo
 This is a demo of [1PG](https://github.com/theADAMJR/1PG) and was made during a [course](https://www.youtube.com/watch?v=PuJjkD8zKVI).
 
